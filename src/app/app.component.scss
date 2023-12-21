@@ -1,0 +1,91 @@
+:host {
+    width: 100%;
+    height: 100%;
+}
+
+.main-part {
+    width: 100%;
+    height: 100%;
+}
+
+.first-section {
+    width: 50%;
+    height: 20%;
+}
+
+.time-card {
+    width: 50%;
+    height: 50%;
+    background-color: var(--hYellow);
+    border-radius: 8px;
+}
+
+.second-section {
+    width: 60%;
+    height: 60%;
+   // background-color: blue;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.first-card {
+    background-color: var(--lCoral);
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.cards-div {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    gap: 2%;
+}
+
+.first-and-second-cards-div {
+    width: 100%;
+    height: 30%;
+    gap: 1%;
+}
+
+.first-div {
+    width: 100%;
+    height: 100%;
+}
+
+.second-div {
+    height: 100%;
+    gap: 2%;
+}
+
+.second-div-cards {
+    background-color: var(--teaRose);
+    width: 100%;
+    height: 49%;
+}
+
+figure {
+    height: 60%;
+}
+
+.first-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.second-and-third-image {
+    height: 100%;
+    border-radius: 100%;
+}
+
+.third-div {
+    width: 100%;
+    height: auto;
+    gap: 1%;
+}
+
+.third-div-card {
+    height: 7rem;
+    background-color: var(--linen);
+}

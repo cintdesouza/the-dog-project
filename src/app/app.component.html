@@ -1,7 +1,95 @@
-Você está há {{ time }} segundos na página.
+<app-header />
 
-@for (item of dogList; track item) {
-  Ganhou um {{ item.dog }}!
-}
+<main class="main-part" fxLayout="column" fxLayoutAlign="start center">
+  <section
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    class="first-section"
+  >
+    <div class="time-card" fxLayout="row" fxLayoutAlign="center center">
+      @if ( time <= 1) { Você está há {{ time }} segundo na página. } @else {
+      Você está há {{ time }} segundos na página. }
+    </div>
+  </section>
+
+  <section
+    fxLayout="row [wrap]"
+    fxLayoutAlign="center center"
+    class="second-section"
+  >
+    <div fxLayout="column" fxLayoutAlign="start center" class="cards-div">
+      <div
+        fxLayout="row"
+        fxLayoutAlign="center center"
+        class="first-and-second-cards-div"
+      >
+        <div
+          class="first-div"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxFlex="64"
+        >
+          @for (item of dogList; track item; let index = $index) { @if (index ==
+          0) {
+          <div
+            class="first-card"
+            fxLayout="row"
+            fxLayoutAlign="space-around center"
+          >
+            <figure
+              class="dog-image"
+              fxLayout="row"
+              fxLayoutAlign="start center"
+            >
+              <img [src]="item.img" class="first-image" />
+            </figure>
+            <span>Ganhou um {{ item.dog }}!</span>
+          </div>
+          } }
+        </div>
+        <div
+          class="second-div"
+          fxLayout="column"
+          fxLayoutAlign="center center"
+          fxFlex="35"
+        >
+          @for (item of dogList; track item; let index = $index) { @if (index >
+          0 && index <= 2) {
+          <div
+            class="second-div-cards"
+            fxLayout="row"
+            fxLayoutAlign="space-around center"
+          >
+            <figure
+              class="dog-image"
+              fxLayout="row"
+              fxLayoutAlign="start center"
+            >
+              <img [src]="item.img" class="second-and-third-image" />
+            </figure>
+            <span>Ganhou um {{ item.dog }}!</span>
+          </div>
+          } }
+        </div>
+      </div>
+      <div class="third-div" fxLayout="row [wrap]" fxLayoutAlign="center start">
+        @for (item of dogList; track item; let index = $index) { @if (index > 2)
+        {
+        <div
+          class="third-div-card"
+          fxFlex="49.5"
+          fxLayout="row"
+          fxLayoutAlign="space-around center"
+        >
+          <figure class="dog-image" fxLayout="row" fxLayoutAlign="start center">
+            <img [src]="item.img" class="second-and-third-image" />
+          </figure>
+          <span>Ganhou um {{ item.dog }}!</span>
+        </div>
+        } }
+      </div>
+    </div>
+  </section>
+</main>
 
 <router-outlet></router-outlet>
